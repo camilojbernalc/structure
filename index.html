@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tag para el titulo de la pestaña en el navegador</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+           p{
+               text-align: center;
+           }
+        </style>
+    </head>
+    <body>
+
+        <h1>Iniciando con HTML</h1>
+        En html se usan etiquetas o tags para indicar que es lo que se quiere hacer, hay tags informativos y de contenido,
+        todos están entre mayor que y menor que <strong>< ></strong> donde se escribe una palabra clave que indica que se
+        hace con ella y se cierran con un <strong>/</strong> antes de la misma palabra clave del tag, algunos tag no
+        necesitan otro de cierre.
+        <p>El tag <strong>!DOCTYPE</strong> inicia todos los archivos de html, es una etiqueta de información, no la ve
+            el usuario, en mayúscula y con el signo de admiración al inicio, y se le añade la palabra html antes de
+            cerrar el tag, e indica al navegador que es un archivo en html5.</p>
+        <p>Posterior a eso se genera el tag <strong>html</strong>, es una etiqueta de contenido, abre y cierra,
+            y que encierra todo el contenido del lenguaje html, en la tag de apertura se indica el idioma en el que se
+        encuentra el contenido de la página usando <strong>lang=es</strong> sirve para indicarle al navegador que la
+            página se puede traducir a otro idioma diferente al inicial</p>
+        <p>El tag html contiene todo lo que se refiere a este lenguaje, pero dentro hay dos secciones el
+            <strong>Head</strong> donde se ubican las etiquetas informativas como las <strong>meta</strong> donde se
+            informa al navegador que símbolos se van a usar según el idioma que se muestre al usuario con el atributo
+            <strong>charset="UTF-8</strong> , entre otras opciones, usando un tag independiente para cada uno, también
+            se ubica el tag <strong>title</strong> que sirve para poner un título en la pestaña del navegador </p>
+        <p>la otra sección dentro de html es <strong>body</strong> y es donde se ubica la información que puede ver
+            el usuario y la mayoría de las tag de contenido. Esta a su vez también tiene diferentes partes, la principal
+            (main), la lateral (side) y el pie de página (footer), todas son etiquetas usadas para mantener más organizado
+        el contenido de la página</p>
+        <p> El tag <strong>p</strong> identifica un párrafo y hay que abrir y cerrar indicando donde empieza y termina
+            el párrafo.</p>
+        <p>El tag <strong>h</strong> para títulos tiene 6 niveles siendo el mayor en orden de prioridad el 1, más grande
+            la letra y en negrita, y el menor el 6</p>
+        <p><strong>El tag <em>strong</em> convierte el contenido en negrita</strong></p>
+        <p><em>El tag <strong>em</strong> hace énfasis y convierte el texto a cursiva, se pueden anidar tags afectando
+            a todo lo que está contenido entre ellos</em> permitiendo dar un formato más especifico a cada parte del
+            texto</p>
+        <h1>Iniciando con CSS</h1>
+        <p style="font-size: 20px; text-align: center">se puede hacer de varias maneras directamente en el archivo de
+            html, o en un archivo aparte para mejor organización. En la primera metodología se ubican los estilos dentro
+            del tag html y se debe hacer en cada línea que se quiera modificar, iniciando con la palabra style y luego
+            de 1 igual se indica la propiedad que se quiere modificar para luego de 1 dos puntos(:) poner el nuevo valor
+            que tendrá dicha propiedad. Esta modificación se aplica a todo lo que este dentro de los tags incluso otros
+            tags, <em style="font-size: 25px" ><strong>ejemplo de la afectación</strong> </em>  de los estilos en los tags
+            que se encuentran dentro de otros tags, a cada tag se le pueden modificar varias propiedades, pero entre más
+            propiedades se modifiquen más desordenando parecerá el código</p>
+        <p>La segunda forma de hacer los estilos dentro del mismo archivo html es definir en el head un tag style dentro
+            del cual se definirán de manera general los cambios de cada etiqueta, para ello se escribe la etiqueta y en
+            {} las propiedades a cambiar con los nuevos valores de forma similar a la anterior metodología</p>
+        <p>Por último la mejor forma de hacerlo para mantener el orden es generar un nuevo archivo aparte con extensión
+            .css y que se enlaza en el head del archivo html usando <em>(rel="stylesheet")</em> para indicar que debe buscar
+                una hoja de estilos y luego <em>(href="dir archivo")</em> para dar la ubicación del archivo que va a aplicar
+            los cambios a las etiquetas correspondientes.</p>
+        <p>En el caso que haya muchas veces la misma etiqueta se puede usar las etiquetas que encierran a aquella que se
+            quiere modificar de forma específica: <br><strong>por ejemplo <em>cambiar el color solo a esta frase en negrita
+            </em></strong></p>
+        <p id="id-ex">Puedo crear un identificador (id), específicamente para cada etiqueta que requiera un tratamiento
+            separado de la etiqueta general y así modificar solo aquella que se necesita, y se hace dentro de los < >
+            del tag usando id="nombre específico" para luego en el archivo CSS usando #nombre específico y ahora se
+            procede a hacer las modificaciones diferentes a las demás etiquetas iguales</p>
+        <h1>Insertando una imagen</h1>
+        <p>Para añadir una imagen se usa el tag img que es una etiqueta de información, es decir no tiene cierre, donde
+            se requiere la dirección de la imagen usando la propiedad src = "dirección" dentro de la etiqueta</p>
+        <img id="banner" src="banner.jpeg">
+
+        <p>Los estilos se pueden cambiar desde el navegador con las herramientas del desarrollador (ctrl + shift + i) y se
+        ven los cambios de manera instantánea en la página, pero luego deben hacerse en el archivo de estilos </p>
+
+        <h2>Listas en HTML</h2>
+        <div class="lists">
+            <p>Las listas en HTML, pueden ser ordenadas es decir con números, o sin ordenar y van con viñetas</p>
+            <ul>
+                <li class="items">Son etiquetas de contenido por eso van con etiqueta de cierre</li>
+                <li class="items">El tag para lista ordenada es ol</li>
+                <li class="items">El tag para lista sin ordenar es ul</li>
+                <li class="items">Para cada item de la lista se requiere el tag li</li>
+            </ul>
+            <img src="download.png">
+        </div>
+        <p>Se pueden alterar los estilos de varios items al mismo tiempo definiendo una clase y asociando cada item a la clase para que en el archivo css solo se tenga que hacer un estilo, para llamar la clase en el archivo css se inicia con un punto (.items) y se pueden cambiar los aspectos necesarios </p>
+
+        <h2>Hacer divisiones de contenido</h2>
+        <div class="divs">
+            <p>Se usa la etiqueta div para marcar una sección de contenido. Por otro la diferencia entre clases e identificadores es que la clase permite reutilizar el estilo con todos los miembros de esa clase y el identificador solo se puede usar una vez, con el contenido de la etiqueta en el que se definió</p>
+        </div>
+        <h2>Manipulando la posición de una imagen</h2>
+        <p>Hay que aclarar que hay etiquetas que por si mismas forman un bloque es decir que al cerrar la etiqueta se incluye un salto de línea, como es el caso de las listas y básicamente no se puede usar el espacio a su lado, para anular esa característica se usa la propiedad del estilo display:"inline-block" que ajusta el bloque a solo el espacio donde esta la lista permitiendo usar el que queda al lado, como en el ejemplo de la imagen de arriba</p>
+
+
+    </body>
+</html>
