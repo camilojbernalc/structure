@@ -3,17 +3,30 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Segunda página</title>
+		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="secondPage.css">
 	</head>
 	<body>
 		<header>
-			<img src="logo.jpeg">
-			<p>No sé que tan buena práctica sea poner una imagen dentro de una etiqueta de título</p>
-			<ul>
-				<li>Volver</li>
-				<li>Continuación</li>
-			</ul>
+			<div class="position" >
+				<img src="logo.jpeg">
+				<nav>
+					<ul>
+						<li><a href="index.html">Página 1</a></li>
+						<li><a href="thirdPage.html">página 3</a></li>
+						<li><a href="https://www.google.com">Google.com</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-	
+		<p>"No sé que tan buena práctica sea poner una imagen dentro de una etiqueta de título"</p>
+		<p>Para realizar enlaces a otra páginas se usa la etiqueta a que es de contenido, con abre y cierre y que con la propiedad href se direcciona a otra página local o externa.</p>
+		<p>Existe la etiqueta nav para indicar cual es el panel de navegación de la página, en este caso encierra toda la lista</p>
+		<p>Para indicar que la lista sea horizontal en los estilos se indica con la etiqueta nav li la propiedad display: inline; para que cada item de la lista solo ocupe el espacio necesario de su palabra y que no de salto de línea</p>
+		<p>Para alterar la lista que sea en mayúsculas de color negro y en negrita se hace a través de CSS no de la etiquetas de HTML, por ejemplo para aumentar el espacio interno entre las palabras se usa la etiqueta margin: top right bottom left eligiendo a cual lado se quiere distanciar</p>
+		<p>Se tiene el archivo reset.css que es una colaboración de la comunidad para hacer que los estilos que el navegador crea automáticamente no choquen con los estilos hechos por el diseñador, este archivo los borra.</p>
+		<p>Para cambiar la posición de un elemento se cuenta con la etiqueta position y se puede ubicar por pixeles o porcentaje referente a los lados de la pantalla</p>
+		<p>Usando la etiqueta div puedo encapsular varios elementos para afectar los estilos de forma simultánea </p>
+		<p>Al usar auto en las propiedades de posición por ejemplo el navegador lo asume dependiendo de la pantalla y varía y parece siempre centrado en este caso </p>
 	</body>
 </html>

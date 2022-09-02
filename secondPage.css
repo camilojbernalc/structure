@@ -1,0 +1,30 @@
+header{
+	background-color: lightgray;
+	padding: 20px 0;
+}
+
+.position{
+	width: 940px;   /*debido a que la mayoría de pantallas tiene 1280px y 940 es Apróx. el 70% del ancho de la pantalla*/
+	position: relative; /*por defecto la posición está en estática entonces se cambia el posicionamiento a relative par poder moverlo*/
+	margin: 0 auto; /*el 0 inicial significa parte superior e inferior y el auto se refiere a los lados*/
+}
+
+nav{
+	position: absolute;
+	top: 112px;
+	right: 0;
+}
+
+nav li{
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
