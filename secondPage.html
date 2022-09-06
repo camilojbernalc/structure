@@ -9,7 +9,7 @@
 	<body>
 		<header>
 			<div class="position" >
-				<img src="logo.jpeg">
+				<img src="logo.jpeg" alt="logo html y css">
 				<nav>
 					<ul>
 						<li><a href="index.html">Página 1</a></li>
@@ -19,6 +19,7 @@
 				</nav>
 			</div>
 		</header>
+		<h1>Construyendo el header de la página</h1>
 		<p>"No sé que tan buena práctica sea poner una imagen dentro de una etiqueta de título"</p>
 		<p>Para realizar enlaces a otra páginas se usa la etiqueta a que es de contenido, con abre y cierre y que con la propiedad href se direcciona a otra página local o externa.</p>
 		<p>Existe la etiqueta nav para indicar cual es el panel de navegación de la página, en este caso encierra toda la lista</p>
@@ -28,5 +29,37 @@
 		<p>Para cambiar la posición de un elemento se cuenta con la etiqueta position y se puede ubicar por pixeles o porcentaje referente a los lados de la pantalla</p>
 		<p>Usando la etiqueta div puedo encapsular varios elementos para afectar los estilos de forma simultánea </p>
 		<p>Al usar auto en las propiedades de posición por ejemplo el navegador lo asume dependiendo de la pantalla y varía y parece siempre centrado en este caso </p>
+		<main>
+			<ul class="icons" >
+				<li>
+					<h2>HTML</h2>
+					<img src="html-icon.png" alt="logo html">
+					<p class="descript">Ejemplo de productos que se pretenden mostrar en la página</p>
+					<p class="decryp">Usando listas sin orden, se inicia el formato del contenido de cada grupo</p>
+				</li>
+				<li>
+					<h2>CSS</h2>
+					<img src="css-icon.png" alt="logo css">
+					<p class="descript">En este caso se toman tres productos para mostrar</p>
+					<p class="decryp">Se crean un grupo de etiquetas que contienen título, imágenes, y descripciones cortas a modo de párrafos </p>
+				</li>
+				<li>
+					<h2>JAVASCRIPT</h2>
+					<img src="JS-icon.png" alt="logo js">
+					<p class="descript">Se organiza ese grupo de etiquetas dentro de cada item de lista </p>
+					<p class="decryp">Se termina aplicando los estilos para que tengan una mejor apariencia</p>
+				</li>
+			</ul>
+		</main>
+		<h1>Construyendo el main de la página</h1>
+		<p>En el main se crea el contenido al que se quiere que el usuario ponga mas atención, es decir donde se exhibirá la idea central de la página, en este caso se hace usando listas sin orden con items "complejos" porque cada item de la lista tiene más de un contenido, título, imagen, párrafos y así </p>
+		<p>Se puede capturar el movimiento del ratón para hacer algún efecto de forma gráfica para llamar la atención del usuario hacia algo especial.</p>
+		
+		<footer>
+			<h1>Construyendo el footer de la página</h1>
+			<p>Es la última sección del body, donde se incluye en este caso información de lo que se presenta en la página</p>
+			<img src="example2.jpeg">
+			<p class="resume"> &copy Resumen de HTML y CSS básico</p> <!-- Se usa $copy para ingresar el símbolo copyright mediante una forma llamada entidad -->
+		</footer>
 	</body>
 </html>
