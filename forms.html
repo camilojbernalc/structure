@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Usando Formularios</title>
+	<link rel="stylesheet" href="stylesReset.css">
+	<link rel="stylesheet" href="stylesForms.css">
+</head>
+
+<body>
+	<header>
+		<div class="position">
+			<img src="images/logo.jpeg" alt="logo html y css">
+			<h1>usando formularios</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="structure.html">Estructura</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<p>Los formularios se crean con la etiqueta form y luego se incluyen las entradas, mediante el tag input que se necesiten desde cajas de texto normal, o específicos para ingresar fechas, correos o claves, incluso botones y otras más, cada una tiene unas propiedades y exigencias de entrada especificas.</p>
+		<p>Cada input de ingreso por teclado va acompañado de un label, para indicar que se recibe en esa caja de texto que se pueden enlazar incluyendo in id en el input y emparejándolo con un for en el label, ambos propiedades de la etiqueta, es decir antes del > que define la etiqueta</p>
+		<h2>Jerarquía de las llamadas en CSS</h2>
+		<p>Cuando se van a aplicar los estilos, CSS tiene en cuenta la forma en como se esta llamando a la etiqueta, donde la menor prioridad es de la etiqueta sencilla, sigue la clase, y por último el identificador, cuando se trata de los estilos en archivo, si se tienen estilos en el archivo de HTML este tendrá mayor prioridad, en el caso de que se apliquen más de un estilo a la misma etiqueta, también se suman las prioridades en caso de ser llamados por mas de una forma alm mismo tiempo, por ejemplo p.paragraph que usa una etiqueta y una clase para la misma llamada, teniendo así mayor prioridad que si solo se llama por la clase </p>
+		<h2>tablas con html y css</h2>
+		<p>Las tablas también tienen una semántica similar a al del body de la estructura en HTML, es decir tiene un encabezado definido dentro de la tabla por el tag thead, y sus celdas se definen con el tag th, para hacer énfasis en que son el título. las tablas también tienen un cuerpo definido por tbody y un tfooter para finalizar, en este caso ambos usan las celdas con el tag td, es importante definir la tabla correctamente para que el código se haga entendible y fácil de usar los estilos posteriormente usando las llamadas de las etiquetas como thead se puede diferenciar el encabezado de la tabla</p>
+		<form> <!--Tag para hacer formularios en HTML-->
+			<label for="formbox">Etiqueta de la caja de texto</label> <!--Etiqueta de la caja de texto que esta enlazada mediante el id y el for que son propiedades de cada tag-->
+			<input type="text" id="formbox" class="singleinput" required> <!-- Tag para crear una entrada tipo caja de texto, con la palabra required se hace el campo obligatorio-->
+			
+			<label for="datebox">Fecha</label>
+			<input type="date" id="datebox" class="singleinput" required> <!--formulario de tipo fecha que automáticamente permite elegir la fecha de un calendario gráfico-->
+			
+			<label for="emailbox">Correo electrónico</label>
+			<input type="email" id="emailbox" class="singleinput" required placeholder="ej: nombre@dominio.com"> <!--obliga a tener la forma de un email, es decir debe tener la @ incluida en el texto, con placeholder se hace un ejemplo de como se requiere que ingrese la información -->
+			
+			<label for="message">Cuadro de texto dinámico</label>
+			<textarea cols="70" rows="10" id="message"></textarea>
+			
+			<fieldset> <!--Etiqueta especifica para agrupar items semejantes-->
+				<legend>Título de los radiobutton </legend> <!--Etiqueta correcta para poner titulo cuando se tiene un fieldset-->
+				<label for="firstradio"><input type="radio" name="forms" id="firstradio" value="primero" checked>primer radiobutton </label> <!--Con la propiedad name igual en todos los radiobutton se pueden agrupar para que solo se pueda seleccionar una de las opciones, se pueden poner los input dentro de los label, con la opción checked se inicia con esa respuesta escogida en caso de que el usuario no elija algo distinto-->
+				
+				<label for="secondradio"><input type="radio" name="forms" id="secondradio" value="segundo">segundo radiobutton </label>
+				
+				<label for="thirdradio"><input type="radio" name="forms" id="thirdradio" value="tercero">tercero radiobutton </label>
+				
+			</fieldset>
+			
+			<fieldset>
+				<label for="choosebox">Caja de selección</label>
+				<select id="choosebox">        <!--Tag para crear cajas de selección de varias opciones, cada entrada necesita del tag option-->
+					<option>Primera opción</option>
+					<option>Segunda opción</option>
+					<option>Tercera opción</option>
+				</select>
+			</fieldset>
+			<label class="checkbox"><input type="checkbox">input de checkbox</label>
+			
+			<input type="submit" value="Enviar datos" class="button"> <!--Por defecto el botón toma el idioma del navegador con value se puede asegurar lo que quiere diga en el botón-->
+		</form>
+		
+		<table> <!--Etiqueta que define que se comienza a dibujar la tabla-->
+			<thead> <!--Señala el encabezado de la tabla-->
+				<tr> <!--Define una fila de la tabla-->
+	                <th> título</th> <!--Define cada celda del encabezado y su contenido-->
+					<th>tabla</th>
+				</tr>
+			</thead>
+			
+			<tbody> <!--define el cuerpo de la tabla-->
+				<tr>
+					<td>2 fila 1 celda</td> <!--define una celda del cuerpo de la tabla-->
+					<td>2 fila y celda</td>
+				</tr>
+				<tr>
+					<td>3 fila 1 celda</td>
+					<td>3 fila 2 celda</td>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td>fin</td>
+					<td>tabla</td>
+				</tr>
+			</tfoot>
+		</table>
+		
+	</main>
+	
+	<footer>
+		<img src="images/example2.jpeg" alt="HTML + CSS + JS">
+		<p class="resume"> &copy Resumen de HTML y CSS básico</p>
+		
+	</footer>
+</body>
+</html>

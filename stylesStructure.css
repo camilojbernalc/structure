@@ -38,6 +38,10 @@ h1{
 	font-weight: bold;
 }
 
+body{
+	background: darkgrey
+}
+
 .icons{
 	width: 940px;
 	margin: 0 auto;
@@ -90,7 +94,7 @@ h1{
 
 footer{
 	text-align: center;
-	background: url("background.jpg");  /*Se puede insertar una imagen en css usando la instrucción URL, por ser dentro de la etiqueta background repite la imagen hasta llenar el tamaño del elemento*/
+	background: url("images/background.jpg");  /*Se puede insertar una imagen en css usando la instrucción URL, por ser dentro de la etiqueta background repite la imagen hasta llenar el tamaño del elemento*/
 	padding: 20px;
 }
 

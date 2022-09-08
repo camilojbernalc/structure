@@ -1,0 +1,111 @@
+header{
+    background-color: lightgray;
+    padding: 20px 0;
+}
+
+.position{
+    width: 940px;   /*debido a que la mayoría de pantallas tiene 1280px y 940 es aproximadamente el 70% del ancho de la pantalla*/
+    position: relative; /*por defecto la posición está en estática entonces se cambia el posicionamiento a relative par poder moverlo*/
+    margin: 0 auto; /*el 0 inicial significa parte superior e inferior y el auto se refiere a los lados*/
+}
+
+nav{
+    position: absolute;
+    top: 112px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{        /*se usa una pseudo clase llamada hover para capturar el movimiento del ratón cuando se pasa sobre algún elemento gráfico de la pagina*/
+    color: darkred;
+    text-decoration: underline;
+}
+
+body{
+    background: lightslategray;
+}
+
+img{
+
+}
+
+h1{
+    background: lightgray;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    font-size: 20px;
+}
+
+em{
+    font-size: 24px;
+
+}
+
+strong{
+    font-size: 28px;
+}
+
+strong em{
+    color: darkred;
+}
+
+#id-ex{
+    text-align: end;
+}
+
+#banner{
+    width: 50%;
+}
+
+.lists{
+    background: white;
+}
+
+.items{
+    font-style: italic;
+}
+
+.divs{
+    color: darkblue;
+}
+
+.images{
+    width: 50%;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer{
+    text-align: center;
+    background: url("images/background.jpg");  /*Se puede insertar una imagen en css usando la instrucción URL, por ser dentro de la etiqueta background repite la imagen hasta llenar el tamaño del elemento*/
+    padding: 20px;
+}
+
+footer img{
+    padding: 20px;
+}
+
+.resume{
+    font-size: 13px; /* el tamaño por defecto es de 16px*/
+    margin-top: 10px;
+}
