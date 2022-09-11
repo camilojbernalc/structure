@@ -1,0 +1,309 @@
+/*Aquí empieza el estilo del header*/
+header{
+	background-color: lightgray;
+	padding: 20px 0;
+}
+
+body{
+	font-family: 'Comfortaa', cursive;
+}
+
+.position{
+	width: 70%;   /*debido a que la mayoría de pantallas tiene 1280px y 940 es aproximadamente el 70% del ancho de la pantalla*/
+	position: relative; /*por defecto la posición está en estática entonces se cambia el posicionamiento a relative par poder moverlo*/
+	margin: 0 auto; /*el 0 inicial significa parte superior e inferior y el auto se refiere a los lados*/
+}
+
+nav{
+	position: absolute;
+	top: 112px;
+	right: 0;
+}
+
+nav li{
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover{        /*se usa una pseudo clase llamada hover para capturar el movimiento del ratón cuando se pasa sobre algún elemento gráfico de la pagina*/
+	color: darkred;
+	text-decoration: underline;
+}
+
+h1{
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 20px 30px;
+}
+h1:first-letter{
+	font-size: 30px;
+}
+/* Aquí termina el estilo del header y comienza el del body*/
+
+/*Aquí comienzan los estilo para la página index*/
+.banner{
+	width: 100%;
+}
+
+.main{
+	padding: 1.5em 0;
+	background: #FEFEFE;
+}
+
+.maintitle{
+	clear: left; /*limpia cualquier configuración que este después del título a la izquierda*/
+	
+}
+
+p{
+	margin: 0 0 1.5em; /*1.5em significa una vez el tamaño de la fuente por defecto, si se cambia el número es la cantidad de veces que multiplica el tamaño de la fuente */
+}
+
+.text{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.diagram {
+	width: 150px;
+	float: left; /*float permite a la imagen ubicarse y hacer que los elementos circundantes la rodeen*/
+	margin: 0 20px 20px 0;
+}
+
+.text strong{
+	font-weight: bold;
+}
+
+.text em{
+	font-style: italic;
+}
+
+.examples{
+	background: linear-gradient(#FEFEFE, #888888); /*Linear gradient sirve para hacer degradados en los colores en este caso del background, pudiendo escoger por orden de sintaxis la inclinación del degradado por defecto horizontal, y luego de cada color el porcentaje que debe ocupar dentro del degradado*/
+	padding: 1.5em 0;
+}
+
+.image{
+	width: 70%;
+	margin: 0 auto ;
+}
+
+.imageexample{
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.listsimage{
+	width: 40%;
+	transition: 400ms;
+	box-shadow: 10px 10px 15px 15px cadetblue; /*se requiere indicar el tamaño en horizontal luego vertical, si el número es positivo significa derecha y abajo, el tercer parámetro es la difuminación de la sobra dada en pixeles, el cuarto valor es el alcance de la sombra también en pixeles, y al final el color. Se pueden poner más sombras siempre separadas por comas y con todos sus parámetros. Si se aplica la propiedad inset la sombra es interna. usando text-shadow se pueden sombrear textos*/
+}
+
+.listsimage:hover{
+	opacity: 30%; /*sirve para cambiar la opacidad de la imagen donde 0 o 0% es ninguna luz, por tanto no hay imagen, esta opacidad puede aplicarse a cualquier item usando la propiedad de color y cambiándolo con el método rgba(r,g,b,opacidad) */
+}
+.listscontent{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.uolist{
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.items{
+	line-height: 1.5; /*el 1.5 indica un interlineado de una vez y media el estándar de la altura de línea*/
+}
+
+.items:first-child{     /*first-child es una pseudoclase que permite aplicar un estilo a un elemento específico que pertenece a una clase y que no se quiere afectar a más elementos, en este caso solo al primero. existen otras opciones que permiten modificar a los demás ya sea el último, un número específico, o los pares o impares */
+	font-weight: bold;
+}
+
+.items:before{
+	content: "\2713"; /*Se pueden usar los pseudoelementos para ingresar un símbolo antes de cada frase de un grupo y para ingresar símbolos unicode en CSS se escribe \código y solo hay que buscar en la tabla que se quiere insertar en este caso a modo de viñeta*/
+}
+
+.external{
+	background: #888888;
+	padding: 1.5em 0;
+}
+
+.resources{
+	width: 70%;
+	margin: 0 auto;
+	padding: 1.5em 0;
+	display: flex;
+	justify-content: center;
+}
+
+/*Aquí terminan los estilo para el index y comienzan los estilos para la página de estructura y listas*/
+.icons{
+	width: 70%;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.icons li{ /*para referirse específicamente a los items de la lista que pertenezca a esa clase*/
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top; /*para hacer que los elementos se alineen con la parte superior*/
+	background: lightgray;
+	margin: 0 1.5%; /* margin es espacio externo*/
+	padding: 30px 20px; /*padding es espacio interno el primer valores es vertical y el segundo en horizontal*/
+	box-sizing: border-box; /*el borde de los items es el limite del espacio interno definido y se reparte el espacio según los estilos*/
+	border: 2px solid black; /*La primer instrucción se refiere al ancho del borde la segunda el estilo y la tercera el color */
+	border-radius: 10px; /*se usa para redondear la punta de los bordes, se usan todos al tiempo o cada uno por separado teniendo en cuenta que empiezan arriba-izq y avanzan en sentido horario*/
+}
+
+.icons li:hover{    /*Puedo incluir todos los efectos que quiero que ocurran cuando el ratón pase sobre el elemento */
+	border-color: darkred;
+	border-width: 4px;
+}
+
+.icons li:hover h2{     /*Debido a que hay un estilo marcado para los h2 dentro de los items hay que hacer un selector diferente para que la prioridad del uno no afecte al otro */
+	font-size: 35px;
+}
+
+.icons li:active {
+	border-color: darkblue;
+}
+
+.icons h2{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.descript{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.decryp{
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+/*Aquí terminan los estilos de la página estructuras y comienzan los estilos de la página de formularios*/
+
+h2{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0;
+	text-transform: uppercase;
+	/*text-align: center;*/
+}
+
+form{
+	margin: 40px 0;
+}
+
+form label, form legend{
+	display: block; /*por defecto los elementos de un formulario tienen a display de tipo inline, solo ocupa su tamaño en la página para hacer que sean verticales se convierten a block que cada elemento ocupa toda la página*/
+	font-size: 20px;
+	margin: 10px 0 10px;
+}
+
+.singleinput, form textarea{ /*Se puede aplicar el mismo estilo a varios elementos separándolos por comas */
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+select{
+	font-size: 18px;
+}
+
+.checkbox{
+	margin: 20px 0;
+}
+
+.button{
+	width: 40%;
+	padding: 15px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: dodgerblue;
+	border-radius: 5px;
+	transition: 1s; /*hace la transición más demorada*/
+	cursor: pointer; /*Cambia el puntero de la flecha a la mano*/
+}
+
+.button:hover{
+	background-color: cadetblue;
+	transform: scale(1.2) rotate(7deg); /*se pueden tener dos transformaciones en una sola transformación pero deben hacerse en la misma línea para que se apliquen ambas, sino se aplicara solo la última*/
+}
+
+table{
+	margin: 40px 40px;
+	
+}
+
+thead{
+	background: lightslategray;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+td, th{
+	border: 1px solid black;
+	padding: 8px 15px ;
+}
+
+/*Aqí terminan los estilos de la página de formularios y comienzan los estilos para el footer*/
+
+footer{
+	text-align: center;
+	background: url("images/background.jpg");  /*Se puede insertar una imagen en css usando la instrucción URL, por ser dentro de la etiqueta background repite la imagen hasta llenar el tamaño del elemento*/
+	padding: 20px;
+}
+
+footer img{
+	padding: 20px;
+}
+
+.resume{
+	font-size: 13px; /* el tamaño por defecto es de 16px*/
+	margin-top: 10px;
+}
+
+/*se conocen como media queries y se usan para cambiar un comportamiento en este caso dependiendo del tamaño máximo de la pantalla  */
+@media screen and (max-width: 480px) {
+	.logo{
+		margin: 0 auto;
+		padding: 1.5em 0;
+		display: flex;
+		justify-content: center;
+	}
+	
+	nav{
+		position: static;
+		text-align: center;
+	}
+	
+	.uolist, .listsimage{
+		width: 100%;
+	}
+	
+	.position, .text, .listscontent, .resources{
+		width: auto;
+	}
+}
